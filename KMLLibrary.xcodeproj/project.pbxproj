@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		15B4766922749C9C0076BF02 /* KMLLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B4766722749C9C0076BF02 /* KMLLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3F06D140D74C2C079347115 /* libPods-KMLLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA9ACEEDA44E6972D811DA9 /* libPods-KMLLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15B4766422749C9C0076BF02 /* KMLLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KMLLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B4766722749C9C0076BF02 /* KMLLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMLLibrary.h; sourceTree = "<group>"; };
 		15B4766822749C9C0076BF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C659114BD9E4DDDFEB0E14A /* Pods-KMLLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMLLibrary.release.xcconfig"; path = "Target Support Files/Pods-KMLLibrary/Pods-KMLLibrary.release.xcconfig"; sourceTree = "<group>"; };
+		9DE98052617A3F55BC35E258 /* Pods-KMLLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMLLibrary.debug.xcconfig"; path = "Target Support Files/Pods-KMLLibrary/Pods-KMLLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		CBA9ACEEDA44E6972D811DA9 /* libPods-KMLLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KMLLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F06D140D74C2C079347115 /* libPods-KMLLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +37,8 @@
 			children = (
 				15B4766622749C9C0076BF02 /* KMLLibrary */,
 				15B4766522749C9C0076BF02 /* Products */,
+				9334495194FE0CAB77070E2D /* Pods */,
+				9A596DDF232CE8E3663B4F49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +59,24 @@
 			path = KMLLibrary;
 			sourceTree = "<group>";
 		};
+		9334495194FE0CAB77070E2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DE98052617A3F55BC35E258 /* Pods-KMLLibrary.debug.xcconfig */,
+				3C659114BD9E4DDDFEB0E14A /* Pods-KMLLibrary.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A596DDF232CE8E3663B4F49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBA9ACEEDA44E6972D811DA9 /* libPods-KMLLibrary.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -70,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15B4766C22749C9C0076BF02 /* Build configuration list for PBXNativeTarget "KMLLibrary" */;
 			buildPhases = (
+				FBED387C6EB0EEF276F66373 /* [CP] Check Pods Manifest.lock */,
 				15B4765F22749C9C0076BF02 /* Headers */,
 				15B4766022749C9C0076BF02 /* Sources */,
 				15B4766122749C9C0076BF02 /* Frameworks */,
@@ -124,6 +150,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FBED387C6EB0EEF276F66373 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMLLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15B4766022749C9C0076BF02 /* Sources */ = {
@@ -260,6 +311,7 @@
 		};
 		15B4766D22749C9C0076BF02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DE98052617A3F55BC35E258 /* Pods-KMLLibrary.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -284,6 +336,7 @@
 		};
 		15B4766E22749C9C0076BF02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C659114BD9E4DDDFEB0E14A /* Pods-KMLLibrary.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
